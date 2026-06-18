@@ -142,7 +142,10 @@
             height: auto;
         }
         @media (max-width: 900px) {
-            .float-deco { display: none; }
+            /* RWD：所有裝飾小圖一律隱藏 */
+            .float-deco,
+            .deco-camera,
+            .deco-girl { display: none; }
         }
         /* 星星：why2026 框左下角，稍微壓住框線 */
         .deco-star01 {
@@ -507,10 +510,28 @@
         @media (max-width: 900px) {
             .itinerary-grid { grid-template-columns: repeat(2, 1fr); row-gap: 30px; }
             .itinerary-day:not(:last-child)::after { display: none; }
+
+            /* RWD：卡片內容置中放大、icon 移到上方置中 */
+            .day-content {
+                grid-template-columns: 1fr;     /* 改單欄 */
+                justify-items: center;
+                text-align: center;
+                border-right: none;
+                padding-right: 0;
+            }
+            .day-icon {
+                order: -1;                      /* icon 移到最上面 */
+                width: 96px;                    /* 放大 64 → 96 */
+                align-self: center;
+                margin-bottom: 12px;
+            }
+            .day-list { display: inline-block; text-align: left; }  /* 整塊置中、項目仍對齊 */
+            .day-list li { font-size: 1.05rem; }   /* 放大 */
+            .day-title { font-size: 1.7rem; }
+            .day-badge { font-size: 1.35rem; }
         }
         @media (max-width: 600px) {
             .itinerary-grid { grid-template-columns: 1fr; }
-            .day-content { border-right: none; padding-right: 0; }
         }
 
         /* --- 香川必訪景點推薦 區塊 --- */
@@ -618,8 +639,8 @@
             position: relative;
             display: flex;
             flex-direction: column;
-            align-items: center;        /* card 內容置中 */
-            text-align: center;
+            align-items: stretch;       /* 內容靠左對齊（卡片本身由 grid 置中）*/
+            text-align: left;
             padding: 5px 18px;
         }
         /* 欄與欄之間的虛線分隔 */
@@ -634,7 +655,7 @@
         .faq-q {
             display: flex;
             align-items: flex-start;     /* 齊上 */
-            justify-content: center;
+            justify-content: flex-start;  /* 齊左 */
             gap: calc(10px * var(--fluid-scale));
             font-weight: bold; color: var(--primary-blue);
             font-size: calc(1.2rem * var(--fluid-scale));
@@ -660,7 +681,7 @@
         .faq-a {
             display: flex;
             align-items: flex-start;     /* 齊上 */
-            justify-content: center;
+            justify-content: flex-start;  /* 齊左 */
             gap: calc(10px * var(--fluid-scale));
             color: var(--text-light);
             font-size: calc(0.95rem * var(--fluid-scale));
@@ -677,22 +698,22 @@
         /* --- Footer（滿版）--- */
         .footer {
             width: 100%;
-            position: relative;   /* 讓按鈕可疊在圖片上 */
+            display: flex;
+            flex-direction: column;   /* 圖片在上、按鈕在下 */
         }
-        /* 圖片滿版：寬度撐滿、高度自動、完整不裁切、不倒圓角 */
+        /* 圖片滿版貼齊底部：寬度撐滿、高度自動、完整不裁切、不倒圓角 */
         .footer-img {
             display: block;
             width: 100%;
             height: auto;
+            margin: 0;                /* 貼齊底部，無空隙（按鈕在其上方）*/
         }
-        /* 按鈕列：絕對定位，疊在圖片上方 */
+        /* 按鈕列：圖片下方 */
         .footer-inner {
-            position: absolute;
-            top: 35%; left: 10%; right: 0;
-            z-index: 2;
             max-width: 1200px;
+            width: 100%;
             margin: 0 auto;
-            padding: calc(40px * var(--fluid-scale)) calc(20px * var(--fluid-scale));
+            padding: calc(20px * var(--fluid-scale));
             display: flex;
             justify-content: flex-end;   /* 按鈕靠右 */
             align-items: center;
