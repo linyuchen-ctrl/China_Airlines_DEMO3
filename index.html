@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 瀨戶內藝術旅行 | 中華航空直飛高松獨家新提案</title>
+    <meta name="description" content="2026年起瀨戶內海藝術祭作品首度展期外定期開放！搭乘中華航空(China Airlines)台北直飛高松(TAK)，輕鬆探索直島黃南瓜、豐島美術館、女木島及小豆島，深度體驗香川必訪景點。立即預訂華航航班送高松機場巴士來回券、栗林公園門票及小豆島船票三大好禮！">
+    <meta name="keywords" content="2026瀨戶內藝術祭, 瀨戶內海旅遊, 中華航空高松直飛, 高松自由行, 直島黃南瓜, 豐島美術館, 小豆島天使之路, 香川景點推薦, 華航高松航班">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #00205b;
+            --light-cyan: #3970B3;
+            --brand-red: #e34c57;
+            --bg-color: #FAF7F3;
+            --text-main: #333333;
+            --text-light: #666666;
+            --peach-accent: #f28b70;
+            --green-accent: #7ebd66;
+            --yellow-accent: #fcd555;
+            --box-shadow: 0 calc(4px * var(--fluid-scale)) calc(15px * var(--fluid-scale)) rgba(0,0,0,0.05);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: var(--bg-color);            /* 載入前/失敗時的底色，留著當保險 */
+            background-image: url("./img/paper_bg.png");  /* 水彩紙質感 */
+            background-repeat: repeat;                     /* 無接縫平鋪 */
+            background-size: auto;                         /* 平鋪用原尺寸 */
+            color: var(--text-main);
+            line-height: 1.6;
+            container-type: inline-size;
+            --fluid-scale: 1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: calc(20px * var(--fluid-scale));
+        }
+
+        /* GEO / SEO 純文字隱藏技術 */
+        .visually-hidden {
+            position: absolute !important;
+            width: calc(1px * var(--fluid-scale)) !important; height: calc(1px * var(--fluid-scale)) !important;
+            padding: 0 !important; margin: -1px !important;
+            overflow: hidden !important; clip: rect(0, 0, 0, 0) !important;
+            white-space: nowrap !important; border: 0 !important;
+        }
+
+        /* --- Hero 區塊 --- */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            max-width: calc(1000px * var(--fluid-scale));
+            margin: 0 auto calc(50px * var(--fluid-scale)) auto;
+            border-radius: calc(20px * var(--fluid-scale));
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+
+        .hero-bg-img { width: 100%; display: block; height: auto; }
+
+        .hero-logo-overlay {
+            position: absolute; top: 2%; left: 2%;
+            width: 25%; max-width: calc(200px * var(--fluid-scale)); z-index: 10;
+        }
+        .hero-logo-overlay img {
+            width: 80%; height: auto; display: block;
+            filter: drop-shadow(0 calc(2px * var(--fluid-scale)) calc(4px * var(--fluid-scale)) rgba(255,255,255,0.8));
+        }
+
+        .btn-image-overlay {
+            position: absolute; bottom: 6%; left: 9%; width: 30%; transform: rotate(-5deg);
+            min-width: calc(150px * var(--fluid-scale)); max-width: calc(250px * var(--fluid-scale));
+            display: block; transition: transform 0.2s, filter 0.2s; z-index: 10;
+        }
+        .btn-image-overlay img {
+            width: 100%; height: auto; display: block;
+            filter: drop-shadow(0 calc(4px * var(--fluid-scale)) calc(10px * var(--fluid-scale)) rgba(0, 0, 0, 0.3));
+        }
+        .btn-image-overlay:hover { transform: scale(1.1) rotate(-2deg); filter: brightness(1.05); }
+
+        /* --- 共用區塊標題 --- */
+        .section-title-wrapper {
+            position: relative;
+            text-align: center;
+            margin: calc(30px * var(--fluid-scale)) 0 calc(15px * var(--fluid-scale));
+        }
+
+        .section-title {
+            position: relative;
+            z-index: 2;
+            display: inline-block;
+            color: var(--primary-blue);
+            padding: calc(10px * var(--fluid-scale)) calc(40px * var(--fluid-scale));
+            border-radius: calc(30px * var(--fluid-scale));
+            font-size: 1.5rem; /* 加大10px (原1.5rem) */
+            font-weight: bold;
+            box-shadow: var(--box-shadow);
+            /* border: calc(2px * var(--fluid-scale)) solid #e2f0f9;  */
+        }
+
+        /* --- 為什麼 2026 最值得去 區塊 --- */
+        .why-section {
+            position: relative;
+            margin-bottom: 60px;
+        }
+
+        .title-watercolor-img {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px; max-width: 40%;
+            height: auto; z-index: 1; pointer-events: none;
+        }
+        /* 左對齊標題用的水彩底圖（香川景點那段） */
+        .title-watercolor-img--left {
+            left: 18%;          /* 對齊左側標題，可微調 */
+        }
+
+        .why-frame-wrapper {
+            position: relative;
+            padding: 45px 50px;
+            margin-top: 20px;
+        }
+
+        .why-bg-frame {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+            object-fit: fill; z-index: 0;
+        }
+
+        /* 浮動裝飾小圖（共用）：平板／手機不顯示 */
+        .float-deco {
+            position: absolute;
+            z-index: 5;
+            pointer-events: none;
+            height: auto;
+        }
+        @media (max-width: 900px) {
+            .float-deco { display: none; }
+        }
+        /* 星星：why2026 框左下角，稍微壓住框線 */
+        .deco-star01 {
+            width: 72px;
+            left: -22px; bottom: -22px;
+        }
+        /* 花：必訪藝術島 第一張卡右下角，往外凸出避開文字 */
+        .deco-flower01 {
+            width: 64px;
+            right: -18px; bottom: -18px;
+        }
+        /* 樹：必訪藝術島 第四張卡右下角，再往下一點 */
+        .deco-tree01 {
+            width: 64px;
+            right: -18px; bottom: -52px;
+        }
+        /* 雲：gift 與藝術島中間、偏左 */
+        .deco-divider { position: relative; height: 0; z-index: 4; }
+        .deco-cloud01 {
+            width: 140px;
+            left: 6%; top: -10px;
+        }
+        /* 星星：gift 第一張卡左上角 */
+        .deco-star-gift {
+            width: 60px;
+            left: -22px; top: -22px;
+        }
+        /* 相機 / 飛機：4天3夜 框上方兩角 */
+        .deco-camera-itin {
+            width: 80px;
+            left: -28px; top: -34px;
+        }
+        .deco-airplane-itin {
+            width: 92px;
+            right: -28px; top: -30px;
+        }
+
+        /* 右側裝飾：相機 + 拍照女孩（固定在右邊） */
+        .deco-camera {
+            position: absolute;
+            top: -100px; right: -20px;
+            width: 90px; z-index: 5;
+        }
+        .deco-girl {
+            position: absolute;
+            bottom: -100px; right: -70px;
+            width: 150px; z-index: 6;
+        }
+
+        /* 三欄卡片 */
+        .why-grid {
+            position: relative; z-index: 2;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .why-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding: 5px 18px;
+            text-align: left;
+            background: transparent;
+            box-shadow: none;
+        }
+        /* 欄與欄之間的虛線分隔（對齊圖片） */
+        .why-card:not(:first-child)::before {
+            content: '';
+            position: absolute;
+            left: -15px; top: 8%;
+            height: 84%;
+            border-left: 2px dashed #d9cfc0;
+        }
+
+        .why-title-group {
+            display: flex;
+            align-items: center;     /* icon 與兩行標題垂直置中 */
+            gap: 14px;
+            margin-bottom: 14px;
+        }
+
+        .why-icon-img {
+            width: 52px; height: 52px;   /* 固定大小，PNG 本身含圓底色 */
+            flex-shrink: 0;
+            object-fit: contain;
+        }
+
+        .why-title {
+            font-weight: 600;
+            font-size: 1.4rem;       /* 對齊圖片，想更大再往上加 */
+            line-height: 1.25;
+            color: var(--primary-blue);
+        }
+
+        .why-desc {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--text-light);
+            text-align: left;
+        }
+
+        /* NEW! 標籤：跟在描述文字下方、微微傾斜 */
+        .badge-new-img {
+            width: 58px; height: auto;
+            margin-top: 14px;
+            align-self: flex-start;
+            transform: rotate(-8deg);
+        }
+
+        /* --- 必訪藝術島推薦 區塊 --- */
+        .island-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 5px;
+            margin-bottom: 50px;
+        }
+
+        .island-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding: 2px;                        /* 框內留白，可調 */
+            /* 手繪 PNG 線框（九宮切片，四角不變形） */
+            border: 10px solid transparent;      /* 螢幕上顯示的框線厚度 */
+            border-image: url("./img/island_frame.png") 50 / 22px / 0 round;
+            background-clip: padding-box;        /* 白底只到框線內側，不蓋到手繪線 */
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.12));
+        }
+
+        /* 島名標籤：傾斜、突出左上角，像隨手貼上 */
+        .island-tag {
+            position: absolute;
+            top: -16px; left: -6px;
+            width: 96px; margin: 0; z-index: 3;
+            transform: rotate(-6deg);
+        }
+        .island-tag-img {
+            width: 100%; height: auto; display: block;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.12));
+        }
+
+        .island-img {
+            width: 100%; height: 160px;
+            object-fit: cover; display: block;
+            border-radius: 12px;
+        }
+
+        .island-content {
+            padding: 16px 8px 8px;
+            flex: 1;                    /* 撐滿照片下方剩餘空間，文字靠上、空白留在下方 */
+        }
+        .island-content ul { list-style: none; padding-left: 0; }
+        .island-content li {
+            position: relative; padding-left: 16px;
+            font-size: 0.95rem; font-weight: 500;
+            color: var(--primary-blue);
+            line-height: 1.5; margin-bottom: 8px;
+        }
+        .island-content li::before {
+            content: '•'; color: var(--primary-blue);
+            font-weight: bold; position: absolute; left: 0;
+        }
+
+        /* --- 高松三大好禮 區塊 --- */
+        .gift-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        /* 卡片：手繪 PNG 框 + 去背圖當底、貼齊下方，文字壓在上方 */
+        .gift-card {
+            --gift-img: none;                  /* 每張卡用 inline style 各自指定圖 */
+            position: relative;
+            text-align: left;
+            padding: 22px 22px 0;              /* 下方不留白，讓底圖貼齊 */
+            min-height: 350px;                 /* 預留底圖＋上方文字空間，可調 */
+            background-image: var(--gift-img);
+            background-repeat: no-repeat;
+            background-position: bottom center;
+            background-size: 100% auto;         /* 滿版寬、靠下；去背上方留白讓文字壓上去 */
+            background-clip: border-box;
+            border: 0px solid transparent;
+            border-radius: 25px;
+            border-image: url("./img/island_frame.png") 50 / 22px / 0 round;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.12));
+        }
+        /* 內容左右兩欄：左=標題+內文（上下），右=數字 */
+        .gift-inner {
+            display: grid;
+            grid-template-columns: auto auto;   /* 左：文字  右：數字 */
+            align-items: start;                 /* 數字與標題齊上 */
+            column-gap: 12px;
+            width: fit-content;
+            max-width: 100%;
+            margin: 0 auto;                     /* 整組維持置中 */
+            text-align: left;
+        }
+        .gift-text {
+            display: flex;
+            flex-direction: column;             /* 標題在上、內文在下 */
+            gap: 8px;
+        }
+
+        .gift-num {
+            flex-shrink: 0;
+            width: 46px; height: 46px;
+            border-radius: 50%;
+            background: #E36F82;               /* 01 粉紅，想換深藍改 var(--primary-blue) */
+            color: #fff;
+            font-size: 1.2rem; font-weight: 900; line-height: 1;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .gift-card:nth-child(2) .gift-num { background: var(--green-accent); } /* 02 綠 */
+        .gift-card:nth-child(3) .gift-num { background: var(--light-cyan); }   /* 03 藍 */
+        .gift-title {
+            margin: 0;
+            color: var(--primary-blue);
+            font-size: 1.4rem;
+            font-weight: bold;
+            line-height: 1.25;
+            text-align: left;
+        }
+        .gift-desc {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        /* 禮物 icon + 數量有限提醒：結成一組，靠右 */
+        .gift-notice {
+            position: absolute;
+            right: 0; top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            z-index: 3;
+        }
+        .gift-notice-icon { width: 38px; height: auto; display: block; }
+        .gift-notice span {
+            background: #fcd9df;            /* 粉色方形底，可調色 */
+            color: var(--primary-blue);    /* 字改藍色 */
+            padding: 4px 12px;             /* 撐出方塊感 */
+            border-radius: 6px;            /* 想要完全直角改成 0 */
+            font-weight: bold;
+            font-size: 0.95rem;
+            white-space: nowrap;
+        }
+
+        @media (max-width: 600px) {
+            .gift-notice {
+                position: static;
+                transform: none;
+                justify-content: center;
+                margin-top: 10px;
+            }
+        }
+
+        /* --- 4天3夜 推薦行程 區塊 --- */
+        .itinerary-frame {
+            position: relative;
+            padding: 30px 40px;
+            margin: 10px 0 10px;
+        }
+        .itinerary-bg-frame {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+            object-fit: fill; z-index: 0;
+        }
+
+        .itinerary-grid {
+            position: relative; z-index: 2;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 60px;                          /* 卡間距，箭頭放這裡 */
+        }
+
+        .itinerary-day {
+            position: relative;
+            background: transparent;
+            padding: 0 4px;
+            display: flex;
+            flex-direction: column;             /* 讓下方內容能撐到底 */
+        }
+
+        /* 卡與卡之間的 SVG 箭頭（最後一張右邊不放） */
+        .itinerary-day:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 45px;                          /* 對齊標題高度，可調 */
+            right: -55px;                       /* 置於 gap 中央 = (gap+寬)/2 */
+            transform: translateY(-50%);
+            width: 50px; height: 28px;
+            background: url("./img/arrow.svg") no-repeat center / contain;
+            pointer-events: none;
+        }
+
+        /* DAY + 地名 一組：置中、放大、放水彩底圖 */
+        .day-head {
+            text-align: center;
+            margin-bottom: 16px;
+            padding: 12px 10px;
+            background-image: var(--day-bg, none);   /* 每張卡 inline 指定 */
+            background-size: 100% 100%;              /* 想保比例改 contain */
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .day-badge {
+            border-radius: 12px;
+            font-size: 1.2rem; font-weight: bold;
+        }
+        .day-title {
+            margin: 0;
+            font-weight: bold;
+            font-size: 1.5rem;
+            line-height: 1.2;
+        }
+
+        /* 下方內容：撐到底、右欄放 icon、右側虛線（最後一張不要） */
+        .day-content {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 64px;
+            align-items: stretch;
+            gap: 8px;
+            padding-right: 14px;
+            border-right: 2px dashed #cbbfa9;
+        }
+        .itinerary-day:last-child .day-content {
+            border-right: none;
+            padding-right: 0;
+        }
+        .day-icon {
+            width: 64px; height: auto;
+            align-self: end;                    /* 貼底 */
+            justify-self: center;
+        }
+
+        .day-list { list-style: none; padding: 0; }
+        .day-list li {
+            font-size: 0.9rem; color: var(--text-light);
+            margin-bottom: 6px; position: relative; padding-left: 16px;
+        }
+        .day-list li::before {
+            content: '✓'; color: var(--green-accent);
+            position: absolute; left: 0; font-size: 0.8rem;
+        }
+
+        @media (max-width: 900px) {
+            .itinerary-grid { grid-template-columns: repeat(2, 1fr); row-gap: 30px; }
+            .itinerary-day:not(:last-child)::after { display: none; }
+        }
+        @media (max-width: 600px) {
+            .itinerary-grid { grid-template-columns: 1fr; }
+            .day-content { border-right: none; padding-right: 0; }
+        }
+
+        /* --- 香川必訪景點推薦 區塊 --- */
+        .spots-container {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 50px;
+            align-items: stretch;   /* 讓左側卡片區與右側橫幅等高 */
+        }
+
+        /* 左：四張月曆感卡片並排 */
+        .spots-grid {
+        flex: 2;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0px;
+        align-items: start;        /* 卡片用自己的比例高度，不被拉高變形 */
+    }
+
+        /* 每張卡 = 整張 composite 圖(照片+底圖，圖自帶外框) + 文字壓在預留區 */
+        .spot-card {
+            --spot-img: none;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;          /* 文字落在下方預留區 */
+            aspect-ratio: 360 / 600;            /* 與底圖比例一致 → 不拉伸變形 */
+            padding: 12px;
+            background-image: var(--spot-img);
+            background-size: contain;            /* 整張圖完整顯示，永不裁切、不變形 */
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.12));
+        }
+        .spot-text { text-align: center; margin-bottom: 20px; }  /* 文字往上提 20px */
+        .spot-title {
+            font-weight: bold; color: var(--primary-blue);
+            font-size: 1.05rem; margin-bottom: 2px;
+        }
+        .spot-desc {
+            font-size: 0.8rem; color: var(--text-light); line-height: 1.5;
+        }
+
+        /* 右：CTA 橫幅，底圖換成 img */
+        .cta-banner {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            border-radius: 18px;
+            padding: 22px 26px;
+            color: #fff;              /* 藍底 → 文字白色，對比清楚 */
+            background-image: url("img/cta_bg.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .cta-logo  { width: 150px; height: auto; }
+        .cta-badge { position: absolute; top: 30px; right: 30px; width: 150px; height: auto; transform: rotate(20deg);}  /* 放大 + 往內靠近內容 */
+        .cta-route { font-size: 2rem; font-weight: 900; line-height: 1.3; margin: 14px 0 10px; }
+        .cta-tag {
+            align-self: flex-start;
+            background: var(--brand-red); color: #fff;
+            font-weight: bold; font-size: 0.95rem;
+            padding: 5px 15px;
+        }
+        .cta-list { list-style: none; padding: 0; margin-top: 14px; padding-right: 100px; }  /* 右下留給行李箱 icon */
+        .cta-list li {
+            font-size: 0.95rem; font-weight: 500;
+            margin-bottom: 8px; position: relative; padding-left: 22px;
+        }
+        .cta-list li::before {
+            content: '✓'; color: var(--green-accent);
+            position: absolute; left: 0; font-weight: bold;
+        }
+        .cta-suitcase { position: absolute; bottom: 10px; right: 50px; width: 130px; height: auto; }
+
+        @media (max-width: 900px) {
+            .spots-container { flex-direction: column; }   /* 卡片在上、橫幅在下 */
+        }
+        @media (max-width: 600px) {
+            .spots-grid { grid-template-columns: repeat(2, 1fr); }  /* 手機改 2 欄 */
+        }
+
+        /* --- FAQ 區塊（與 why2026 同款外框 + 虛線分隔）--- */
+        .faq-frame-wrapper {
+            position: relative;
+            padding: 45px 50px;
+            margin-top: 20px;
+            margin-bottom: calc(10px * var(--fluid-scale));
+        }
+        .faq-bg-frame {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+            object-fit: fill; z-index: 0;
+        }
+        .faq-grid {
+            position: relative; z-index: 2;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);   /* 四欄並排 */
+            gap: 30px;
+        }
+        .faq-item {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;        /* card 內容置中 */
+            text-align: center;
+            padding: 5px 18px;
+        }
+        /* 欄與欄之間的虛線分隔 */
+        .faq-item:not(:first-child)::before {
+            content: '';
+            position: absolute;
+            left: -15px; top: 8%;
+            height: 84%;
+            border-left: 2px dashed #d9cfc0;
+        }
+        /* Q1 + 標題 同一列，齊上 */
+        .faq-q {
+            display: flex;
+            align-items: flex-start;     /* 齊上 */
+            justify-content: center;
+            gap: calc(10px * var(--fluid-scale));
+            font-weight: bold; color: var(--primary-blue);
+            font-size: calc(1.2rem * var(--fluid-scale));
+            line-height: 1.4;
+            min-height: 2.8em;   /* 以兩行為準，短標題下方對齊 */
+            margin-bottom: calc(16px * var(--fluid-scale));
+        }
+        .q-badge {
+            background: var(--light-cyan);   /* 數字底色改 cyan 藍 */
+            color: white;
+            width: calc(34px * var(--fluid-scale));
+            height: calc(34px * var(--fluid-scale));
+            border-radius: 50%;              /* 圓形底圖 */
+            font-size: calc(0.8rem * var(--fluid-scale));
+            flex-shrink: 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2px;   /* 與標題首行對齊 */
+        }
+        .faq-q span:not(.q-badge) { text-align: left; }   /* 標題文字齊左 */
+        /* icon + 內文 同一列，齊上 */
+        .faq-a {
+            display: flex;
+            align-items: flex-start;     /* 齊上 */
+            justify-content: center;
+            gap: calc(10px * var(--fluid-scale));
+            color: var(--text-light);
+            font-size: calc(0.95rem * var(--fluid-scale));
+            line-height: 1.5;
+            text-align: left;
+        }
+        .faq-icon {
+            width: 50px; height: 50px;   /* 內文旁的 icon */
+            flex-shrink: 0;
+            object-fit: contain;
+            margin-top: 1px;
+        }
+
+        /* --- Footer（滿版）--- */
+        .footer {
+            width: 100%;
+            position: relative;   /* 讓按鈕可疊在圖片上 */
+        }
+        /* 圖片滿版：寬度撐滿、高度自動、完整不裁切、不倒圓角 */
+        .footer-img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        /* 按鈕列：絕對定位，疊在圖片上方 */
+        .footer-inner {
+            position: absolute;
+            top: 80px; left: 0; right: 0;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: calc(40px * var(--fluid-scale)) calc(20px * var(--fluid-scale));
+            display: flex;
+            justify-content: flex-end;   /* 按鈕靠右 */
+            align-items: center;
+            flex-wrap: wrap;
+            gap: calc(20px * var(--fluid-scale));
+        }
+        .footer-logo { display: flex; align-items: center; gap: calc(20px * var(--fluid-scale)); }
+        .footer-text h4 {
+            color: var(--primary-blue);
+            font-size: calc(1.825rem * var(--fluid-scale)); /* 加大10px (原1.2rem) */
+            margin-bottom: calc(5px * var(--fluid-scale));
+        }
+        .footer-text p { color: var(--text-light); font-size: calc(0.9rem * var(--fluid-scale)); }
+        .btn-primary { background: var(--brand-red); color: white; text-decoration: none; padding: calc(12px * var(--fluid-scale)) calc(30px * var(--fluid-scale)); border-radius: calc(30px * var(--fluid-scale)); font-weight: bold; box-shadow: 0 calc(4px * var(--fluid-scale)) calc(10px * var(--fluid-scale)) rgba(227, 76, 87, 0.3); transition: transform 0.2s, filter 0.2s; display: inline-block; text-align: center;}
+        .btn-primary:hover { transform: scale(1.1) rotate(-2deg); filter: brightness(1.05); }  /* 與 hero 按鈕一致 */
+
+        /* --- RWD 設定 --- */
+        @media (max-width: 900px) {
+            .why-section { padding-right: 0; }
+            .why-grid { grid-template-columns: repeat(2, 1fr); }
+            .deco-girl { right: calc(-10px * var(--fluid-scale)); width: calc(100px * var(--fluid-scale)); }
+            .island-grid { grid-template-columns: repeat(2, 1fr); }
+            .gift-grid { grid-template-columns: 1fr; }
+            .spots-container { flex-direction: column; }
+            .faq-grid { grid-template-columns: repeat(2, 1fr); }
+            .faq-item::before { display: none; }   /* 換行後隱藏虛線分隔 */
+        }
+        @media (max-width: 600px) {
+            .why-grid { grid-template-columns: 1fr; }
+            .island-grid { grid-template-columns: 1fr; }
+            .faq-grid { grid-template-columns: 1fr; }
+            .footer-inner { flex-direction: column; text-align: center; justify-content: center; }
+            .footer-logo { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Hero 主視覺 -->
+    <section class="hero-section">
+        <div class="visually-hidden">
+            <h1>2026 瀨戶內藝術旅行 - 中華航空直飛高松全新提案</h1>
+            <h2>旅行新提案！走進藝術與自然交織的瀨戶內海</h2>
+            <p>室內作品首度定期開放！搭乘華航直飛高松，輕鬆探索瀨戶內海藝術島嶼。</p>
+        </div>
+
+        <img class="hero-bg-img" src="./img/hero_bg.png" alt="2026瀨戶內藝術旅行主視覺圖">
+
+        <div class="hero-logo-overlay">
+            <img src="./img/memlogo-01.png" alt="中華航空 CHINA AIRLINES">
+        </div>
+
+        <a href="#" class="btn-image-overlay">
+            <img src="./img/btn_hero.png" alt="立即查看航班">
+        </a>
+    </section>
+
+    <!-- 為什麼 2026 最值得去 -->
+    <section class="why-section">
+        <div class="section-title-wrapper">
+            <h2 class="section-title">✨ 為什麼 2026 最值得去？</h2>
+            <img src="./img/watercolor_title_bg.png" alt="" class="title-watercolor-img">
+        </div>
+
+        <div class="why-frame-wrapper">
+            <img src="./img/frame_bg.png" alt="" class="why-bg-frame">
+
+            <img src="./img/deco_camera.png" alt="相機裝飾" class="deco-camera">
+            <img src="./img/deco_girl.png" alt="拍照女孩" class="deco-girl">
+            <img src="./img/deco_star01.png" alt="" class="float-deco deco-star01">
+
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-title-group">
+                        <img src="./img/icon_art.png" alt="藝術" class="why-icon-img">
+                        <h3 class="why-title">藝術祭<span style="color:var(--brand-red);">首度</span><br>展期外開放</h3>
+                    </div>
+                    <p class="why-desc">2026年起，豐島、女木島、男木島...等地的室內作品將於指定日期定期開放。</p>
+                    <img src="./img/badge_new.png" alt="NEW" class="badge-new-img">
+                </div>
+
+                <div class="why-card">
+                    <div class="why-title-group">
+                        <img src="./img/icon_more.png" alt="更多作品" class="why-icon-img">
+                        <h3 class="why-title">更多作品<br>看得到</h3>
+                    </div>
+                    <p class="why-desc">過去只能在藝術祭期間欣賞，現在全年有更多機會造訪藝術島。</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-title-group">
+                        <img src="./img/icon_ticket.png" alt="交通票券" class="why-icon-img">
+                        <h3 class="why-title">交通票券<br>更方便</h3>
+                    </div>
+                    <p class="why-desc">女木島、男木島、小豆島、大島推出區域共通票券，一次探索多件作品。</p>
+                    <img src="./img/badge_new.png" alt="NEW" class="badge-new-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 必訪藝術島推薦 -->
+    <section>
+        <div class="section-title-wrapper">
+            <h2 class="section-title" style="color:#fff"> 必訪藝術島推薦</h2>
+            <img src="./img/watercolor_title_blue.png" alt="" class="title-watercolor-img">
+        </div>
+
+        <div class="island-grid">
+            <div class="island-card">
+                <h3 class="island-tag">
+                    <img class="island-tag-img" src="./img/tag_naoshima.png" alt="">
+                    <span class="visually-hidden">直島</span>
+                </h3>
+                <img class="island-img" src="img/island-naoshima.png" alt="直島熱門藝術作品草間彌生黃南瓜與地中美術館">
+                <div class="island-content">
+                    <ul>
+                        <li>黃南瓜</li>
+                        <li>地中美術館</li>
+                    </ul>
+                </div>
+                <img src="./img/deco_flower.png" alt="" class="float-deco deco-flower01">
+            </div>
+
+            <div class="island-card">
+                <h3 class="island-tag">
+                    <img class="island-tag-img" src="./img/tag_teshima.png" alt="">
+                    <span class="visually-hidden">豐島</span>
+                </h3>
+                <img class="island-img" src="img/island-teshima.png" alt="豐島美術館與鹽田千春作品線的記憶">
+                <div class="island-content">
+                    <ul>
+                        <li>豐島美術館</li>
+                        <li>鹽田千春《線的記憶》</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="island-card">
+                <h3 class="island-tag">
+                    <img class="island-tag-img" src="./img/tag_megijima.png" alt="">
+                    <span class="visually-hidden">女木島</span>
+                </h3>
+                <img class="island-img" src="img/island-megijima.png" alt="女木島現代藝術家作品精選">
+                <div class="island-content">
+                    <ul>
+                        <li>Leandro Erlich《不在的存在》</li>
+                        <li>Nicolas Darrot《Navigation Room》</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="island-card">
+                <h3 class="island-tag">
+                    <img class="island-tag-img" src="./img/tag_shodoshima.png" alt="">
+                    <span class="visually-hidden">小豆島</span>
+                </h3>
+                <img class="island-img" src="img/island-shodoshima.png" alt="小豆島經典景點天使之路與小豆島橄欖公園白色風車">
+                <div class="island-content">
+                    <ul>
+                        <li>天使之路</li>
+                        <li>橄欖公園</li>
+                        <li>藝術作品巡禮</li>
+                    </ul>
+                </div>
+                <img src="./img/deco_tree.png" alt="" class="float-deco deco-tree01" data-rot-max="12">
+            </div>
+        </div>
+    </section>
+
+    <!-- 雲朵裝飾：藝術島與好禮中間、偏左 -->
+    <div class="deco-divider">
+        <img src="./img/deco_cloud.png" alt="" class="float-deco deco-cloud01" data-rot-max="0">
+    </div>
+
+    <!-- 高松三大好禮 -->
+    <section>
+        <div class="section-title-wrapper">
+            <h2 class="section-title" style="color:white; border:none;">高松三大好禮</h2>
+            <img src="./img/watercolor_title_red.png" alt="" class="title-watercolor-img">
+            <!-- 禮物 icon + 數量有限提醒，結成一組放右邊 -->
+            <div class="gift-notice">
+                <img src="./img/icon_gift.png" alt="" class="gift-notice-icon">
+                <span>數量有限，送完為止！</span>
+            </div>
+        </div>
+
+        <div class="gift-grid">
+            <div class="gift-card" style="--gift-img:url('./img/gift-bus.png')">
+                <img src="./img/deco_star01.png" alt="" class="float-deco deco-star-gift">
+                <div class="gift-inner">
+                    <span class="gift-num">01</span>
+                    <div class="gift-text">
+                        <h3 class="gift-title">機場巴士<br>來回乘車券</h3>
+                        <div class="gift-desc">高松機場 ⇔ 高松市區<br>輕鬆往返，便利省時</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gift-card" style="--gift-img:url('./img/gift-park.png')">
+                <div class="gift-inner">
+                    <span class="gift-num">02</span>
+                    <div class="gift-text">
+                        <h3 class="gift-title">栗林公園<br>免費入場券</h3>
+                        <div class="gift-desc">日本三大名園之一<br>感受庭園之美</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gift-card" style="--gift-img:url('./img/gift-boat.png')">
+                <div class="gift-inner">
+                    <span class="gift-num">03</span>
+                    <div class="gift-text">
+                        <h3 class="gift-title">小豆島免費<br>來回船票</h3>
+                        <div class="gift-desc">高松港 ⇔ 小豆島(土庄港)<br>跳島體驗，人氣藝術島</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4天3夜 推薦行程 -->
+    <section>
+        <div class="section-title-wrapper">
+            <h2 class="section-title" style="background:transparent; border:none;">4天3夜 推薦行程</h2>
+        </div>
+
+        <div class="itinerary-frame">
+            <img src="./img/frame_bg.png" alt="" class="itinerary-bg-frame">
+
+            <img src="./img/deco_camera.png" alt="" class="float-deco deco-camera-itin">
+            <img src="./img/deco_airplane.png" alt="" class="float-deco deco-airplane-itin">
+
+            <div class="itinerary-grid">
+                <div class="itinerary-day">
+                    <div class="day-head" style="--day-bg:url('./img/day-bg-1.png')">
+                        <div class="day-badge" style="color:#2F60A8;">DAY 1</div>
+                        <div class="day-title" style="color:#2F60A8;">高松市區</div>
+                    </div>
+                    <div class="day-content">
+                        <ul class="day-list">
+                            <li>栗林公園</li>
+                            <li>北濱Alley</li>
+                            <li>高松商店街</li>
+                        </ul>
+                        <img class="day-icon" src="./img/itinerary-icon-1.png" alt="">
+                    </div>
+                </div>
+
+                <div class="itinerary-day">
+                    <div class="day-head" style="--day-bg:url('./img/day-bg-2.png')">
+                        <div class="day-badge" style="color:#21501D;">DAY 2</div>
+                        <div class="day-title" style="color:#21501D;">小豆島一日遊</div>
+                    </div>
+                    <div class="day-content">
+                        <ul class="day-list">
+                            <li>天使之路</li>
+                            <li>橄欖公園</li>
+                            <li>藝術作品巡禮</li>
+                        </ul>
+                        <img class="day-icon" src="./img/itinerary-icon-2.png" alt="">
+                    </div>
+                </div>
+
+                <div class="itinerary-day">
+                    <div class="day-head" style="--day-bg:url('./img/day-bg-3.png')">
+                        <div class="day-badge" style="color:#F9390E;">DAY 3</div>
+                        <div class="day-title" style="color:#F9390E;">豐島 + 女木島</div>
+                    </div>
+                    <div class="day-content">
+                        <ul class="day-list">
+                            <li>豐島美術館</li>
+                            <li>海景咖啡廳</li>
+                            <li>港口散策</li>
+                        </ul>
+                        <img class="day-icon" src="./img/itinerary-icon-3.png" alt="">
+                    </div>
+                </div>
+
+                <div class="itinerary-day">
+                    <div class="day-head" style="--day-bg:url('./img/day-bg-4.png')">
+                        <div class="day-badge" style="color:#E75186;">DAY 4</div>
+                        <div class="day-title" style="color:#E75186;">高松散步·回程</div>
+                    </div>
+                    <div class="day-content">
+                        <ul class="day-list">
+                            <li>北濱Alley</li>
+                            <li>高松港散步</li>
+                            <li>伴手禮選購</li>
+                        </ul>
+                        <img class="day-icon" src="./img/itinerary-icon-4.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 香川必訪景點推薦 -->
+    <section>
+        <div class="section-title-wrapper" style="text-align:left;">
+            <h2 class="section-title" style="background:transparent; border:none; padding:0; margin-left:70px;">香川必訪景點推薦</h2>
+            <img src="./img/watercolor_title_peach.png" alt="" class="title-watercolor-img title-watercolor-img--left">
+        </div>
+
+        <div class="spots-container">
+            <!-- 左：四張月曆感卡片（圖你自己做，文字保留壓在上面） -->
+            <div class="spots-grid">
+                <div class="spot-card" style="--spot-img:url('./img/spot-ritsurin.png')">
+                    <div class="spot-text">
+                        <div class="spot-title">栗林公園</div>
+                        <div class="spot-desc">米其林三星級<br>日本最美庭園</div>
+                    </div>
+                </div>
+                <div class="spot-card" style="--spot-img:url('./img/spot-shodoshima.png')">
+                    <div class="spot-text">
+                        <div class="spot-title">小豆島</div>
+                        <div class="spot-desc">天使之路・橄欖公園<br>必訪人氣景點</div>
+                    </div>
+                </div>
+                <div class="spot-card" style="--spot-img:url('./img/spot-takamatsu-port.png')">
+                    <div class="spot-text">
+                        <div class="spot-title">高松港</div>
+                        <div class="spot-desc">瀨戶內海跳島旅行<br>的起點</div>
+                    </div>
+                </div>
+                <div class="spot-card" style="--spot-img:url('./img/spot-teshima.png')">
+                    <div class="spot-text">
+                        <div class="spot-title">豐島</div>
+                        <div class="spot-desc">自然與藝術共存<br>療癒之島</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右：CTA 橫幅 -->
+            <div class="cta-banner">
+                <img class="cta-logo" src="img/memlogo-02.png" alt="中華航空 China Airlines">
+                <img class="cta-badge" src="./img/cta-badge.png" alt="現在就出發吧">
+                <h3 class="cta-route">台北 ➔ 高松</h3>
+                <span class="cta-tag">直飛更方便！</span>
+                <ul class="cta-list">
+                    <li>台北直飛高松，最便利！</li>
+                    <li>搭配官網促銷活動</li>
+                    <li>夏季旅展優惠同步開跑</li>
+                </ul>
+                <img class="cta-suitcase" src="./img/cta-suitcase.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- 旅客常見問題 FAQ -->
+    <section>
+        <div class="section-title-wrapper">
+            <h2 class="section-title" style="background:transparent; border:none;">旅客常見問題 FAQ 💬</h2>
+        </div>
+        <div class="faq-frame-wrapper">
+            <img src="./img/frame_bg.png" alt="" class="faq-bg-frame">
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-q"><span class="q-badge">Q1</span><span>高松有哪些必去景點？</span></div>
+                    <div class="faq-a">
+                        <img src="./img/icon_faq1.png" alt="" class="faq-icon">
+                        <span>推薦栗林公園、小豆島、豐島、女木島、高松港、北濱Alley等景點。</span>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q"><span class="q-badge">Q2</span><span>瀨戶內藝術祭展期外可以參觀嗎？</span></div>
+                    <div class="faq-a">
+                        <img src="./img/icon_faq2.png" alt="" class="faq-icon">
+                        <span>可以！2026年起，部分室內作品首度定期開放參觀。</span>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q"><span class="q-badge">Q3</span><span>如何前往小豆島？</span></div>
+                    <div class="faq-a">
+                        <img src="./img/icon_faq3.png" alt="" class="faq-icon">
+                        <span>從高松港搭乘渡輪往土庄港，航程約60分鐘。</span>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q"><span class="q-badge">Q4</span><span>高松自由行建議幾天？</span></div>
+                    <div class="faq-a">
+                        <img src="./img/icon_faq4.png" alt="" class="faq-icon">
+                        <span>建議安排4天3夜～5天4夜，可深度體驗藝術島與海景美食！</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </div>
+    <!-- container 結束，footer 搬到外面做滿版 -->
+
+    <footer class="footer">
+        <!-- 按鈕在上方 -->
+        <div class="footer-inner">
+            <a href="#" class="btn-primary" style="padding: calc(15px * var(--fluid-scale)) calc(40px * var(--fluid-scale)); font-size: calc(1.2rem * var(--fluid-scale));">立即預訂華航 TPE ➔ TAK 航班 ➔</a>
+        </div>
+
+        <!-- 滿版圖片：完整不裁切、不倒圓角 -->
+        <img src="img/footer_bg.png" alt="高松與香川旅遊官方意象標誌" class="footer-img">
+
+        <!-- 文字視覺隱藏，仍保留給 SEO/GEO 抓取（圖上已有文字） -->
+        <div class="footer-text visually-hidden">
+            <h4>從高松開始，你的瀨戶內藝術旅行 ♡</h4>
+            <p>走進直島、豐島、女木島、小豆島，探索藝術、島嶼與海景的慢旅行</p>
+        </div>
+    </footer>
+
+    <!-- 浮動小插圖：載入時隨機旋轉 0~45 度 -->
+    <script>
+        document.querySelectorAll('.float-deco').forEach(function (el) {
+            var max = parseFloat(el.dataset.rotMax);  // 可用 data-rot-max 指定單張上限
+            if (isNaN(max)) max = 45;                 // 預設 0 ~ 45 度
+            var deg = Math.random() * max;
+            el.style.transform = 'rotate(' + deg.toFixed(1) + 'deg)';
+        });
+    </script>
+
+</body>
+</html>
