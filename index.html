@@ -327,11 +327,14 @@
             position: relative;
             text-align: left;
             padding: 22px 22px 0;              /* 下方不留白，讓底圖貼齊 */
-            min-height: 350px;                 /* 預留底圖＋上方文字空間，可調 */
-            background-image: var(--gift-img);
-            background-repeat: no-repeat;
-            background-position: bottom center;
-            background-size: 100% auto;         /* 滿版寬、靠下；去背上方留白讓文字壓上去 */
+            aspect-ratio: 691 / 593;           /* 與底圖同比例 → 圖填滿、文字永遠對齊、三張等高 */
+            /* 上層白色漸層墊在文字後（保證可讀），下層才是去背底圖 */
+            background-image:
+                linear-gradient(to bottom, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.85) 20%, rgba(255,255,255,0) 50%),
+                var(--gift-img);
+            background-repeat: no-repeat, no-repeat;
+            background-position: top center, bottom center;
+            background-size: 100% 100%, cover;  /* 漸層蓋滿；底圖比例相符填滿不變形 */
             background-clip: border-box;
             border: 0px solid transparent;
             border-radius: 25px;
@@ -716,6 +719,24 @@
             .spots-container { flex-direction: column; }
             .faq-grid { grid-template-columns: repeat(2, 1fr); }
             .faq-item::before { display: none; }   /* 換行後隱藏虛線分隔 */
+
+            /* 標題水彩底圖放大，蓋過文字才看得清 */
+            .title-watercolor-img { width: auto; max-width: 75%; }
+            .title-watercolor-img--left { left: 50%; }   /* 放大後置中，避免溢出 */
+            .watercolor_red{
+                top:25%;
+            }
+
+            /* gift 單欄後置中「整個 grid」（不是各別卡片，否則卡片寬度會被文字撐大） */
+            .gift-grid { max-width: 440px; margin-left: auto; margin-right: auto; }
+
+            /* 「數量有限」改置於標題下方，不再絕對定位卡在右邊與標題重疊 */
+            .gift-notice {
+                position: static;
+                transform: none;
+                justify-content: center;
+                margin-top: 8px;
+            }
         }
         @media (max-width: 600px) {
             .why-grid { grid-template-columns: 1fr; }
@@ -723,6 +744,9 @@
             .faq-grid { grid-template-columns: 1fr; }
             .footer-inner { flex-direction: column; text-align: center; justify-content: center; }
             .footer-logo { flex-direction: column; text-align: center; }
+
+            /* 更窄螢幕：水彩底圖再放大，確保比標題文字寬 */
+            .title-watercolor-img { max-width: 94%; }
         }
     </style>
 </head>
@@ -872,7 +896,7 @@
     <section>
         <div class="section-title-wrapper">
             <h2 class="section-title" style="color:white; border:none;">高松三大好禮</h2>
-            <img src="./img/watercolor_title_red.png" alt="" class="title-watercolor-img">
+            <img src="./img/watercolor_title_red.png" alt="" class="title-watercolor-img watercolor_red">
             <!-- 禮物 icon + 數量有限提醒，結成一組放右邊 -->
             <div class="gift-notice">
                 <img src="./img/icon_gift.png" alt="" class="gift-notice-icon">
